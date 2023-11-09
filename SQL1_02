@@ -46,10 +46,51 @@ and not
 국어, 영어, 수학 점수 중 하나라도 100점인 학생을 검색해보세요.
 3과목 모두 70~95점 사이인 학생을 검색해보세요.
 조회할 때는 모든 컬럼을 조회하도록 합니다.
-score 테이블의 각 컬럼은 다음과 같습니다.
 
 Tips
 and와 or은 3개 이상에서도 사용이 가능합니다. 예를 들어 A and B and C라고 작성한다면 A, B, C모두를 만족해야 합니다.
+
+DESC score;
+
+-- 짜장면을 받을 수 있는 학생을 조회하는 쿼리를 작성해주세요.
+
+select *
+from score
+where korean = 100
+or english = 100
+or math = 100;
+-- 과자를 받을 수 있는 학생을 조회하는 쿼리를 작성해주세요.
+select *
+from score
+where korean between 70 and 95 
+and english between 70 and 95
+and math between 70 and 95
+
+[범위를 지정하여 검색하기 - BETWEEN 2]
+
+입사 연도에 따라 직원들에게 추가 보너스를 주 려고 합니다.
+1980년에서 1989년 사이에 입사한 직원과 1990년에서 1999년 사이에 입사한 직원을 각각 검색해봅시다.
+BETWEEN을 이용해서 해결해보세요.
+
+지시사항
+employees 테이블에서:
+1. SELECT문을 이용해서 1980년에서 1989년 사이에 입사한 직원의 모든 컬럼을 검색해보세요.
+2. SELECT문을 이용해서 1990년에서 1999년 사이에 입사한 직원의 모든 컬럼을 검색해보세요.
+
+Tip!
+1980-01-01, 1989-12-31 으로 일자까지 작성해주세요.
+
+-- 1980~1989년도에 입사한 직원을 검색하세요.
+select *
+from employees
+where hire_date between '1980-01-01'and '1989-12-31';
+
+-- 1990~1999년도에 입사한 직원을 검색하세요.
+
+select *
+from employees
+where hire_date between '1990-01-01'and '1999-12-31';
+
 
 
 
