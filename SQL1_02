@@ -91,8 +91,69 @@ select *
 from employees
 where hire_date between '1990-01-01'and '1999-12-31';
 
+[여러 개의 OR를 간결하게 사용하기 - IN 1]
+엘리스는 자기가 좋아하는 작가들이 작성한 책만 골라내려고 합니다.
+A IN B 는 B의 값 중에 A가 포함된 값을 찾아줍니다.
+아래의 문제를 IN문을 사용해서 풀어봅시다.
 
+지시사항
 
+1. 다음 작가가 쓴 책들만 골라서 출력해 봅시다.
+  William Shakespeare
+  John Ronald Reuel Tolkien
+  Joanne Kathleen Rowling
+2. 출력할 때는 *을 이용해 모든 컬럼을 출력하도록 합니다.
+  book테이블의 각 컬럼은 다음과 같습니다.
 
+-- 책들의 정보가 담긴 테이블의 구조를 출력합니다. 수정하실 필요는 없습니다.
+DESC book;
 
+-- 해당하는 작가가 쓴 책만 골라서 출력합니다.
+select *
+from book 
+where author in ('Joanne Kathleen Rowling', 'William Shakespeare', 'John Ronald Reuel Tolkien');
 
+[여러 개의 OR를 간결하게 사용하기 - IN 2]
+
+회사 이벤트 상품을 지급하기 위해서 직원 중 사람을 찾으려는데 이름만 알고 있습니다.
+해당 이름을 가진 사람들을 보고 누가 당첨자인지 확인하려고 합니다.
+employees 테이블을 사용하여 확인해봅시다.
+
+지시사항
+
+1.IN을 이용해서 다음의 이름(last_name)을 가진 사람들만 골라서 검색해봅시다.
+  Michaels
+  Genin
+  Peha
+
+검색할 때는 *을 이용해 모든 컬럼을 검색하도록 합니다.
+
+-- 해당하는 이름을 가진 사람들만 골라서 출력합니다.
+select *
+from employees
+where last_name in ('Michaels','Genin','Peha')
+
+ex) 신체 검사표
+    학생들의 이름과 키, 몸무게, 성별이 저장되어있는 데이터베이스 student가 있습니다.
+    
+    name : 학생의 이름
+    height : 키
+    weight : 몸무게
+    gender : 성별, M은 남성, F는 여성을 나타냄
+    다양한 학생들의 정보를 보고, 아래의 지시사항에 맞추어 정보를 조회해보세요.
+    
+    
+    지시사항
+    아래의 내용을 차례대로 조회한 뒤 제출해보세요.
+    
+    모든 학생의 이름을 조회해보세요.
+    성별이 남자인 학생들의 모든 정보를 조회해보세요.
+    키가 170 이하인 학생들의 키만 따로 조회해보세요.
+    몸무게가 50 이상인 학생들의 몸무게만 따로 조회해보세요.
+    student테이블의 내용은 다음과 같습니다.
+
+-- 아래에 미션을 수행하는 코드를 작성해 봅시다.
+SELECT name FROM student;
+SELECT * FROM student WHERE gender = 'M';
+SELECT height FROM student WHERE height <= 170;
+SELECT weight FROM student WHERE weight >= 50;
