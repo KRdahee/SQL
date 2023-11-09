@@ -1,0 +1,55 @@
+[데이터 삭제하기 1]
+DELETE를 이용해 테이블의 데이터를 삭제해 봅시다.
+현재 도서관에서 잃어버린 책이 몇 권 있습니다.
+하지만 아직 도서관 DB에 남아있어 이용자들에게 혼란을 주는 상황입니다.
+여러분이 book 테이블에서 책들을 직접 지워봅시다.
+
+지시사항
+book 테이블에서 아래 제목을 가진 책들을 데이터베이스에서 삭제하세요.
+Harry Potter and the Philosopher's Stone
+The Lord of the Rings
+book 테이블의 내용은 다음과 같습니다.
+
+Tips
+SQL에서 문자열 속에 '를 넣기 위해서는 \'로 넣어야 합니다.
+
+-- 잃어버린 책 2권을 book 테이블에서 삭제하여 봅시다.
+
+DELETE FROM book WHERE title = 'Harry Potter and the Philosopher\'s Stone';
+
+DELETE FROM book WHERE title = 'The Lord of the Rings';
+
+-- 전체 책의 정보와 회원정보를 조회합니다. 수정하실 필요는 없습니다.
+
+SELECT * FROM book;
+
+
+[데이터 삭제하기 2]
+DELETE를 이용해 테이블의 데이터를 삭제해 봅시다.
+현재 회사를 퇴사한 직원이 한 명 있습니다.
+하지만 아직 데이터베이스에 남아있어 이용자들에게 혼란을 주는 상황입니다.
+employees 테이블에서 퇴사한 직원 'Maliniak Kyoichi' 를 삭제해봅시다.
+
+지시사항
+employees 테이블에서 퇴사한 직원 'Maliniak Kyoichi' 을 데이터베이스에서 삭제해봅시다. 'Maliniak Kyoichi' 의 직원 번호는 10005입니다.
+
+-- DELETE문을 이용해 쿼리를 작성해 보세요.
+
+DELETE 
+FROM employees 
+WHERE emp_no = '10005';
+
+SELECT * FROM employees;
+
+
+[가게 DB 구축하기]
+
+엘리스의 가게가 드디어 개업 준비를 끝마쳤습니다.
+가게의 판매 물품도 들어왔으니 이제 DB에 물건들의 정보를 넣어 봅시다.
+
+지시사항
+아래의 내용을 product테이블에 추가해 봅시다.
+
+-는 없는 내용으로 간주하고 null로 넣으면 됩니다.
+product테이블의 내용은 다음과 같습니다.
+
