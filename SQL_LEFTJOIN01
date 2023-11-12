@@ -1,0 +1,39 @@
+[왼쪽 테이블의 모든 값과 교집합 - LEFT JOIN 1]
+앞선 실습에서는 대여 기록을 user테이블과 연결해 조회해 보았습니다.
+이번에는 연결을 할 때 왼쪽 부분인 rental테이블이 모두 조회되도록 LEFT JOIN을 이용해 연결해 봅시다.
+
+지시사항
+rental테이블의 모든 컬럼을 조회하되 user테이블과 연결해 조회해 보세요.
+연결할 때에는 user테이블의 id와 rental테이블의 user_id를 기준으로 연결해 보세요.
+이때 rental테이블이 중심이 되도록 연결해 보세요.
+
+-- 대출,반납에 대한 정보를 user 테이블과 연결해 조회해 봅시다.
+-- 대신 rental 테이블이 중심이 되도록 조회해 봅시다.
+
+SELECT *
+FROM rental
+left join user 
+on rental.user_id = user.id;
+
+[왼쪽 테이블의 모든 값과 교집합 - LEFT JOIN 2]
+앞선 실습에서는 연봉 기록을 employees테이블과 연결해 검색해보았습니다.
+이번에는 연결을 할 때 왼쪽 부분인 salaries 테이블이 모두 검색되도록 LEFT JOIN을 이용해 연결해 봅시다.
+
+지시사항
+salaries 테이블의 모든 컬럼을 검색하되 employees 테이블과 연결해 검색해 보세요.
+연결할 때에는 salaries 테이블의 emp_no와 employees 테이블의 emp_no를 기준으로 연결해 보세요.
+이때 LEFT JOIN을 이용해 salaries 테이블이 중심이 되도록 연결해 보세요.
+
+-- 연봉에 대한 정보를 employees 테이블과 연결해 조회하되 salaries 테이블을 중심으로 조회해보세요.
+
+SELECT *
+FROM salaries
+left join employees
+on salaries.emp_no = employees.emp_no;
+
+
+
+
+
+
+
