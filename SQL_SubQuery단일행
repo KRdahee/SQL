@@ -1,0 +1,80 @@
+[단일 행 서브쿼리 1]
+
+단일 행 서브쿼리(Single-Row Subquery)는 서브쿼리의 조회 결과가 1개의 행만 나오는 서브쿼리를 뜻합니다.
+서브쿼리에서 나오는 결과가 하나이므로 메인쿼리와 서브쿼리 결과는 단일행 연산자를 사용하여 비교합니다.
+단일행 서브쿼리에서 사용되는 연산자
+
+연산자 기호	연산자 뜻
+=	같다
+<>	같지 않다
+>	크다
+>=	크거나 같다
+
+지시사항
+emp테이블을 조회해주세요.
+
+SELECT * FROM emp;
+-- 사원 번호가 7인 사원보다 나이가 어린 사원의 모든 컬럼을 조회 하는 쿼리를 작성하세요.
+SELECT * 
+FROM emp
+WHERE birthdate >
+(SELECT birthdate
+FROM emp
+WHERE empnum = 7);
+
+
+[단일 행 서브쿼리 2]
+
+단일 행 서브쿼리(Single-Row Subquery)는 서브쿼리의 조회 결과가 1개의 행만 나오는 서브쿼리를 뜻합니다.
+서브쿼리에서 나오는 결과가 하나이므로 메인쿼리와 서브쿼리 결과는 단일행 연산자를 사용하여 비교합니다.
+단일행 서브쿼리에서 사용되는 연산자
+
+연산자 기호	연산자 뜻
+=	같다
+<>	같지 않다
+>	크다
+>=	크거나 같다
+
+지시사항
+emp테이블을 조회해주세요.
+전 사원의 급여 평균보다 낮은 급여를 받는 사원을 조회하는 쿼리를 작성하세요.
+
+SELECT * FROM emp;
+-- 전 사원의 급여 평균보다 낮은 급여를 받는 사원의 모든 컬럼을 조회 하는 쿼리를 작성하세요.
+
+SELECT *
+FROM emp
+WHERE sal < (
+    SELECT AVG(sal)
+    FROM emp
+);
+
+
+[단일 행 서브쿼리 3]
+
+단일 행 서브쿼리(Single-Row Subquery)는 서브쿼리의 조회 결과가 1개의 행만 나오는 서브쿼리를 뜻합니다.
+서브쿼리에서 출력되는 결과가 하나이므로 메인쿼리와 서브쿼리 결과는 단일행 연산자를 사용하여 비교합니다.
+
+지시사항
+emp테이블에서 부서번호가 40인 부서의 급여 평균보다 높게 받는 사원들의 모든 컬럼과 나이를 조회하는 쿼리를 작성해주세요.
+
+Tips
+나이를 구하는 수식은 제공해 드립니다!
+생년월일을 토대로 지금 년도에 몇 살인지 반환하는 수식이라 생각하고 실습을 진행해 주세요.
+FLOOR( (CAST(REPLACE(CURRENT_DATE,'-','') AS UNSIGNED) - 
+       CAST(REPLACE(birthdate,'-','') AS UNSIGNED)) / 10000 ) as age
+
+SELECT * FROM emp;
+-- 부서번호가 40인 부서의 급여 평균보다 높게 받는 사원들의 모든 컬럼과 나이를 조회하는 쿼리를 작성해주세요.
+SELECT *,
+FLOOR( (CAST(REPLACE(CURRENT_DATE,'-','') AS UNSIGNED) - 
+       CAST(REPLACE(birthdate,'-','') AS UNSIGNED)) / 10000 ) as age
+        
+FROM emp
+WHERE sal > 
+
+(SELECT avg(sal)
+FROM emp
+WHERE deptno = 40);
+
+
