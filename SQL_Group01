@@ -1,0 +1,32 @@
+[데이터 그룹 짓기 - Group By 1]
+rental테이블에는 어떤 사람이 어떤 책을 빌려 갔는지 저장되어있습니다.
+이 정보를 이용해서 어떤 사람이 몇 권의 책을 빌려 갔는지 확인하려고 합니다.
+앞서 배운 GROUP BY문을 이용해 유저별로 몇 권의 책을 빌렸는지 확인해 봅시다.
+
+지시사항
+rental테이블의 user_id컬럼과 해당 컬럼값에 해당하는 데이터의 수를 차례대로 조회해 보세요.
+
+-- rental 테이블의 구조를 조회합니다. 수정할 필요는 없습니다.
+DESC rental;
+
+-- 누가 몇 권의 책을 빌렸는지 조회해 봅시다.
+SELECT *
+FROM rental;
+
+SELECT user_id, COUNT(*)
+FROM rental
+group by user_id;
+
+[데이터 그룹 짓기 - Group By 2]
+salaries 테이블에는 직원들이 받은 정보들에 대한 정보가 연도별로 들어있습니다.
+이 정보를 이용해 한 사람이 몇 번이나 연봉을 받았는지 확인하려고 합니다.
+
+지시사항
+salaries테이블에서 GROUP BY문을 이용해 직원별로 몇 번의 연봉을 받았는지 확인해 봅시다.
+salaries 테이블의 emp_no 컬럼과 해당 컬럼값에 해당하는 데이터의 수를 차례대로 검색해보세요.
+
+-- salaries 테이블에서 emp_no과 직원별로 연봉을 받은 횟수를 조회해보세요.
+
+SELECT emp_no, COUNT(*)
+FROM salaries
+group by emp_no;
