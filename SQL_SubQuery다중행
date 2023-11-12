@@ -1,0 +1,94 @@
+[다중 행 서브쿼리 1]
+다중 행 서브쿼리(Multiple-Row Subquery) 는 서브쿼리의 조회 결과가 두개 이상의 row가 나오는 서브쿼리를 뜻합니다.
+다중 행 비교 연산자
+
+연산자	연산자 뜻
+IN	하나라도 만족하면 참
+ANY	내부적으로 모두 or 연산을 함
+ALL	내부적으로 모두 and 연산을 함
+
+지시사항
+emp테이블에서 'MANAGER' 업무를 가진 사원 중 제일 높은 급여를 받는 사원보다 높은 급여를 받는 사원의 모든 컬럼을 조회하는 쿼리를 작성 해주세요.
+
+SELECT * FROM emp;
+-- MANAGER 업무를 가진 사원 중 제일 높은 급여를 받는 사원보다 높은 급여를 받는 사원을 조회하는 쿼리를 작성해주세요.
+-- 서브
+-- SELECT MAX(sal)
+-- from emp 
+-- WHERE job = 'MANAGER';
+
+--main
+SELECT *
+from emp
+WHERE sal >
+(SELECT MAX(sal)
+from emp 
+WHERE job = 'MANAGER');
+
+[다중 행 서브쿼리 2]
+다중 행 서브쿼리(Multiple-Row Subquery) 는 서브쿼리의 조회 결과가 두개 이상의 row가 나오는 서브쿼리를 뜻합니다.
+다중 행 비교 연산자
+
+연산자	연산자 뜻
+IN	하나라도 만족하면 참
+ANY	내부적으로 모두 or 연산을 함
+ALL	내부적으로 모두 and 연산을 함
+
+지시사항
+emp 테이블에서 각 부서별 급여를 제일 많이 받는 사원들과 동일한 급여를 받는 사원들을 출력하세요.
+
+Tips
+서브쿼리 내에서 각 부서별(group by deptno) 제일 높은 월급(max(sal))의 액수를 조회하는 서브쿼리를 작성하세요.
+영상에서 작성된 코드는 각 부서에서 가장 많은 급여(max(sal))과 같은 급여를 받는 모든 사원을 출력합니다. 
+예를 들어, 10번 부서에서 사원이 받는 최고 급여가 2750인 경우 20번 부서에서 2750 급여를 받는 사원도 쿼리에서 출력됩니다.
+실제로 emp 테이블에서 각 부서별 급여를 제일 많이 받는 사원을 출력하기 위해서는 다음과 같이 서브쿼리를 이용해야 합니다.
+
+select e1.*
+from emp as e1,
+(select deptno, max(sal) as max_sal from emp group by deptno) as e2
+where e1.sal = e2.max_sal
+and e1.deptno = e2.deptno;
+
+SELECT * FROM emp;
+-- 각 부서별 급여를 제일 많이 받는 사원의 월급을 받는 사원들을 조회하는 쿼리를 작성해주세요.
+SELECT MAX(sal)
+from emp
+group by deptno;
+
+-- 서브쿼리
+
+SELECT * 
+from emp
+WHERE sal =any(SELECT MAX(sal)
+from emp
+group by deptno);
+
+-- 메인에 서브 추가
+
+[다중 행 서브쿼리 3]
+다중 행 서브쿼리(Multiple-Row Subquery) 는 서브쿼리의 조회 결과가 두개 이상의 row가 나오는 서브쿼리를 뜻합니다.
+다중 행 비교 연산자
+
+연산자	연산자 뜻
+IN	하나라도 만족하면 참
+ANY	내부적으로 모두 or 연산을 함
+ALL	내부적으로 모두 and 연산을 함
+
+지시사항
+emp테이블에서 각 부서별 나이가 제일 많은 사원의 모든 컬럼을 조회하는 쿼리를 작성해주세요.
+
+Tips
+서브쿼리 내에서 부서별로 group by하여 생년월일이 제일 작은, 즉 min(birthdate)를 하게 되면 총 네개의 로우가 반환되겠죠?
+
+-- 각 부서별 나이가 제일 많은 사원을 조회하는 쿼리를 작성해주세요.
+SELECT min(birthdate)
+from emp
+group by deptno;
+
+SELECT *
+from emp
+WHERE birthdate in
+
+(SELECT min(birthdate)
+from emp
+group by deptno);
