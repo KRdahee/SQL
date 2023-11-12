@@ -1,0 +1,55 @@
+[두 테이블 간의 교집합 - INNER JOIN 1]
+rental테이블에는 누가 어느 책을 빌려 갔는지 저장되어 있습니다.
+하지만 회원이 id로 저장되어 있기에 id만 보고 누가 빌려 갔는지 알기 힘듭니다.
+따라서 rental 테이블을 조회할 때, user 테이블을 연결해 같이 조회해 봅시다.
+
+지시사항
+rental테이블의 모든 컬럼을 조회하되 user테이블과 연결해 조회해 보세요.
+rental테이블의 내용은 다음과 같습니다.
+user 테이블의 내용은 다음과 같습니다.
+
+-- 대출,반납에 대한 정보를 user 테이블과 연결해 조회해 봅시다.
+SELECT *
+FROM rental;
+
+SELECT *
+FROM user;
+
+SELECT *
+FROM rental
+inner join user ;
+
+[두 테이블 간의 교집합 - INNER JOIN 2]
+앞서 대여 정보를 user테이블에 연결해서 조회해 보았습니다.
+하지만 무작정 연결했더니 필요 없는 유저 정보까지 조회됩니다.
+따라서 이번에는 id를 기준으로 연결하여 책을 빌려 간 유저의 정보만 조회되도록 해 봅시다.
+
+지시사항
+*을 사용해 rental 테이블의 모든 컬럼을 조회하되 user테이블과 연결해 조회해 보세요.
+연결할 때에는 user테이블의 id와 rental테이블의 user_id를 기준으로 연결해 보세요.
+rental테이블의 내용은 다음과 같습니다.
+user 테이블의 내용은 다음과 같습니다.
+
+-- 대출,반납에 대한 정보를 user 테이블과 연결해 조회해 봅시다.
+
+SELECT *
+FROM rental
+inner JOIN user
+ON rental.user_id = user.id ;
+
+[두 테이블 간의 교집합 - INNER JOIN 3]
+salaries테이블에는 직원들의 연도별 연봉이 들어있습니다.
+하지만 직원 id로 저장되어 있기에 id만 보고 누구의 연봉인지 알기 힘듭니다.
+따라서 salaries 테이블을 조회할 때, employees 테이블을 연결해 같이 검색해봅시다.
+
+지시사항
+INNER JOIN을 이용해 두 테이블 salaries 테이블과 employees 테이블을 연결하여 검색해보세요.
+연결할 때는 salaries 테이블의 emp_no와 employees 테이블의 emp_no를 기준으로 연결해 보세요.
+salaries 테이블의 모든 컬럼을 검색하되 employees 테이블과 연결해 검색해 보세요.
+
+-- 연봉에 대한 정보를 employees 테이블과 연결해 조회해 봅시다.
+
+SELECT *
+FROM salaries
+inner join employees
+on salaries.emp_no = employees.emp_no;
