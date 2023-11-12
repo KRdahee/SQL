@@ -1,0 +1,40 @@
+[오른쪽 테이블의 모든 값과 교집합 - RIGHT JOIN 1]
+앞의 실습에서는 대여 기록을 user테이블과 연결해 조회해 보았습니다.
+이번에는 연결을 할 때 오른쪽 부분인 user테이블이 모두 조회되도록 RIGHT JOIN을 이용해 연결해 봅시다.
+
+지시사항
+rental테이블의 모든 컬럼을 조회하되 user테이블과 연결해 조회해 보세요.
+연결할 때에는 user테이블의 id와 rental테이블의 user_id를 기준으로 연결해 보세요.
+이때 user테이블의 id가 모두 조회 되도록 RIGHT JOIN을 이용해 연결해 보세요.
+
+Tips
+INNER JOIN과 OUTER JOIN의 차이
+이번 실습의 RIGHT JOIN의 결과를 보면 user에 대응하는 rental이 없더라도 조회를 하는 것을 알 수 있습니다.
+둘의 차이점은 INNER JOIN은 두 테이블의 겹치는 것만을 조회하지만 OUTER JOIN은 겹치지 않더라도 조회를 한다는 것입니다.
+
+-- 대출,반납에 대한 정보를 user 테이블과 연결해 조회해 봅시다.
+-- 대신 user테이블이 중심이 되도록 해 봅시다.
+
+SELECT *
+FROM rental
+right join user
+on rental.user_id = user.id;
+
+[오른쪽 테이블의 모든 값과 교집합 - RIGHT JOIN 2]
+앞선 실습에서는 연봉 기록을 employees 테이블과 연결해 검색해 보았습니다.
+이번에는 연결을 할 때 오른쪽 부분인 employees 테이블이 모두 검색되도록 RIGHT JOIN을 이용해 연결해 봅시다.
+
+지시사항
+salaries 테이블의 모든 컬럼을 검색하되 employees 테이블과 연결해 검색해 보세요.
+연결할 때에는 salaries 테이블의 emp_no와 employees 테이블의 emp_no를 기준으로 연결해 보세요.
+이때 employees 테이블이 중심이 되도록 연결해 보세요.
+
+-- 연봉에 대한 정보를 employees 테이블과 연결해 조회하되 employees 테이블을 중심으로 조회해보세요.
+
+SELECT *
+FROM salaries
+right join employees
+on employees.emp_no = salaries.emp_no ; 
+
+
+
