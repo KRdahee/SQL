@@ -1,0 +1,109 @@
+<msg time='2022-11-10T11:44:41.051+09:00' org_id='oracle' comp_id='clients'
+ msg_id='dbgrmmdcrf_create_relation_full:1941:1503427940' type='NOTIFICATION' group='create'
+ level='16' host_id='DESKTOP-VSU0GVF' host_addr='fe80::4dcf:419c:4ee3:239b%8'
+ version='1'>
+ <txt>Create Relation ADR_CONTROL
+ </txt>
+</msg>
+<msg time='2022-11-10T11:44:41.129+09:00' org_id='oracle' comp_id='clients'
+ msg_id='dbgrmmdcrf_create_relation_full:1941:1503427940' type='NOTIFICATION' group='create'
+ level='16' host_id='DESKTOP-VSU0GVF' host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Create Relation ADR_INVALIDATION
+ </txt>
+</msg>
+<msg time='2022-11-10T11:44:41.173+09:00' org_id='oracle' comp_id='clients'
+ msg_id='dbgrmmdcrf_create_relation_full:1941:1503427940' type='NOTIFICATION' group='create'
+ level='16' host_id='DESKTOP-VSU0GVF' host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Create Relation INC_METER_IMPT_DEF
+ </txt>
+</msg>
+<msg time='2022-11-10T11:44:41.264+09:00' org_id='oracle' comp_id='clients'
+ msg_id='dbgrmmdcrf_create_relation_full:1941:1503427940' type='NOTIFICATION' group='create'
+ level='16' host_id='DESKTOP-VSU0GVF' host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Create Relation INC_METER_PK_IMPTS
+ </txt>
+</msg>
+<msg time='2022-11-10T11:44:41.356+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag]
+ </txt>
+</msg>
+<msg time='2022-11-10T11:44:46.649+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag]
+ </txt>
+</msg>
+<msg time='2022-11-10T11:45:44.487+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T11:46:50.149+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T11:49:19.571+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T11:52:20.114+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T11:53:20.801+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T11:53:33.943+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T11:55:10.346+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T11:56:25.569+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T12:03:31.903+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T12:03:59.132+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T12:31:13.150+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
+<msg time='2022-11-10T12:33:46.979+09:00' org_id='oracle' comp_id='clients'
+ type='UNKNOWN' level='16' host_id='DESKTOP-VSU0GVF'
+ host_addr='fe80::4dcf:419c:4ee3:239b%8'>
+ <txt>Directory does not exist for read/write [C:\oraclexe\app\oracle\product\11.2.0\server\log] [C:\oraclexe\app\oracle\product\11.2.0\server\log\diag\clients]
+ </txt>
+</msg>
