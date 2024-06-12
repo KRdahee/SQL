@@ -1,1 +1,1 @@
-SQL로 데이터 다루기 I
+Java DB 연결을 위한 Oracle SQL 연습 파일!
