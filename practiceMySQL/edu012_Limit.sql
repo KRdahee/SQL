@@ -1,0 +1,7 @@
+USE SMWP_DB01;
+
+SELECT * FROM EMP; 
+
+SELECT * FROM EMP LIMIT 1; #하나의 데이터만 조회!
+
+#SELECT * TOP 10 FROM EMP; 이거 수정 해야하는데 검색 LATER ㄱㄱ
